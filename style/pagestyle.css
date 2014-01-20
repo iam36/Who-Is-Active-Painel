@@ -1,0 +1,14 @@
+table
+{
+	border-collapse:collapse;
+	width: 100%;
+}
+table,th, td
+{
+	border: 1px solid black;
+}
+
+.minhatabela {
+	Font-Family: Calibri, Verdana;
+	font-size: 11px;
+}
