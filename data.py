@@ -6,7 +6,7 @@ class DataObjs(object):
     
     """ Executa um codigo t-sql dentro do SQL Server """
     def _mssqlExec(self,sql,autocommit):
-        conn = pyodbc.connect('DRIVER={SQL Server};SERVER=BMPWSQL24;DATABASE=master;Trusted_Connection=yes')
+        conn = pyodbc.connect('DRIVER={SQL Server};SERVER=SERVER;DATABASE=master;Trusted_Connection=yes')
         conn.autocommit = autocommit
         cur = conn.cursor()
         return cur.execute("EXEC master.dbo.sp_WhoIsActive")
@@ -19,7 +19,7 @@ class DataObjs(object):
         
     """ Mata um processo dentro do Sql Server """
     def killProcess(self, idSession):       
-        conn = pyodbc.connect('DRIVER={SQL Server};SERVER=BMPWSQL24;DATABASE=master;Trusted_Connection=yes')
+        conn = pyodbc.connect('DRIVER={SQL Server};SERVER=SERVER;DATABASE=master;Trusted_Connection=yes')
         conn.autocommit = True
         cur = conn.cursor()
         cur.execute("Kill " + idSession)          
