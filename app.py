@@ -50,5 +50,5 @@ class Root(object):
         do = data.DataObjs()        
         return json.dumps(do.memoryToJson())
    
-cherrypy.config.update({'server.socket_host': '127.0.0.1','server.socket_port': 666}) 
+cherrypy.config.update({'server.socket_host': '127.0.0.1','server.socket_port': 8080}) 
 cherrypy.quickstart(Root())
